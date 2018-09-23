@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Snake</title>
+  <link rel="stylesheet" href="css/main.css">
+  <style>
+    html,
+    body {
+      width: 100%;
+      height: 100%;
+      margin: 0px;
+      border: 0;
+      overflow: hidden;
+      /*  Disable scrollbars */
+      display: block;
+      /* No floating content on sides */
+    }
+  </style>
+</head>
+
+<body>
+
+    <div class="topnav">
+        <a href="index.html"><img src="img/double_arrow_white.png" width="40px" height="40px"/></a>
+        <a href="index.html">Home</a>
+    </div>
+
+  <div id="sideBar">
+    <h2>Snake</h2>
+    <p>
+      A simple javascript snake largely inspired by some coding challenge on YouTube. The
+      goal was to make the canvas resize depending on the window size. I also learned
+      a few array manipulation tricks. There is still a bug when you do two rapid
+      movement and you eat your tail.
+      <br> Use the arrow keys to move
+    </p>
+
+
+    <FORM>
+      <INPUT TYPE="button" style="margin-left: 50%" onClick="history.go(0)" VALUE="Restart the game">
+    </FORM>
+  </div>
+
+  <div id="main_content">
+    <canvas id="canvas_m" width="900" height="900">
+    <p>Your browser don't support canvas. Please update</p>
+  </canvas>
+
+    <script src="js/snake.js"></script>
+  </div>
+
+</body>
+</htmla
