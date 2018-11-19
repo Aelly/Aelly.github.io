@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Discord bot</title>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="Discord, api">
+    <meta name="author" content="Aely">
+
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+
+<body>
+
+    <div class="topnav">
+        <a href="../index.html"><img src="../img/double_arrow_white.png" width="40px" height="40px"/></a>
+        <a href="../index.html">Home</a>
+    </div>
+
+    <div id="text_center">
+        <h1>Discord bot for my WoW guild</h1>
+
+        <p>
+          My World of Warcraft guild decided to switch from a web forum + teamspeack to discord. The person in charge of creating the discord server was able to integrate most of the
+          functionalities of the forum but couldn't find a discord bot compatible with our web calendar so she asked me if i could help her.
+
+          As i've never code a discord bot before i first had to check how it work and then find a way to display the information from our web calendar.
+        </p>
+
+        <h3>Discord bot</h3>
+
+        <p>
+          There is a lot of good <a href="https://discordjs.guide/#/preparations/setting-up-a-bot-application" target="_blank">tutorial</a> online on how to create a simple discord bot.
+          This is quite easy, you just need to create a <b>node.js</b> app and a bot on the discord website and linked them together with a token provided on the discord application page.
+
+  <pre><code>
+client.on("message", message => {
+  if (message.author.bot) return;
+  //SPLIT to get command and argument
+  if (message.content.indexOf(config.prefix) !== 0) return;
+
+  const args = message.content.slice(config.prefix.length).trim().split(/ +/g);
+  const command = args.shift().toLowerCase();
+
+  if(command === 'ping') {
+    message.channel.send('Pong!');
+  }
+}
+</pre></code>
+
+          This function check for each message on the server if this is a command (start with the prefix character defined in a config file, in my case '!'), and send the
+          designed response if we defined one. For exemple if a user type "!ping", the bot send to the same channel "Pong!".
+
+          <img src="../img/discord_bot_ping.jpg"/>
+        </p>
+
+        <h3>Mushraider API</h3>
+
+        <p>
+          The only hard thing in this part is that the mushraid api <a href="http://mushraider.com/en/documentation/api-doc/" target="_blank">exemple</a>
+          are in PHP and i had to find the coresponding function in javascript. In order to get all the information i needed on a specific event i had to acces it with its
+          id. So i add two command:
+          <ul>
+            <li>
+              One that get you the id of the i-th next event. So the id of the next event can be acces with:
+              <br />
+              <img src="../img/discord_bot_id.png" />
+            </li>
+            <li>
+              One that gt you all the information i wanted to display of a specific event:
+              <br />
+              <img src="../img/discord_bot_raid.png" />
+            </li>
+          </ul>
+        </p>
+
+    </div>
+
+</body>
+
+</html>
