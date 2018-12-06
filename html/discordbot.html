@@ -23,9 +23,9 @@
 
         <p>
           My World of Warcraft guild decided to switch from a web forum + teamspeack to discord. The person in charge of creating the discord server was able to integrate most of the
-          functionalities of the forum but couldn't find a discord bot compatible with our web calendar so she asked me if i could help her.
+          functionalities of the forum but couldn't find a discord bot compatible with our web calendar so she asked me if I could help her.
 
-          As i've never code a discord bot before i first had to check how it work and then find a way to display the information from our web calendar.
+          As I've never code a discord bot before I first had to check how it work and then find a way to display the information from our web calendar.
         </p>
 
         <h3>Discord bot</h3>
@@ -59,8 +59,8 @@ client.on("message", message => {
 
         <p>
           The only hard thing in this part is that the mushraid api <a href="http://mushraider.com/en/documentation/api-doc/" target="_blank">exemple</a>
-          are in PHP and i had to find the coresponding function in javascript. In order to get all the information i needed on a specific event i had to acces it with its
-          id. So i add two command:
+          are in PHP and I had to find the coresponding function in javascript. In order to get all the information I needed on a specific event I had to acces it with its
+          id. So i add two commands:
           <ul>
             <li>
               One that get you the id of the i-th next event. So the id of the next event can be acces with:
@@ -68,11 +68,43 @@ client.on("message", message => {
               <img src="../img/discord_bot_id.png" />
             </li>
             <li>
-              One that gt you all the information i wanted to display of a specific event:
+              One that get you all the information i wanted to display of a specific event:
               <br />
               <img src="../img/discord_bot_raid.png" />
             </li>
           </ul>
+        </p>
+
+        <h3>Async function</h3>
+
+        <p>
+          To merge the two command in one I needed to use async function. So when I type "!raid 0" it first send a fetch request to get the id of the next raid, I wait for
+          this request to finish and then send an other request using this id to get the raid information.
+
+          <pre><code>
+try{
+  const response = await fetch(url);
+  const data = await response.json();
+  return data;
+} catch(err){
+  console.log(err);
+}
+        </pre></code>
+
+        <img src="../img/discord_bot_async.png" />
+        </p>
+
+        <h3>Embed version</h3>
+
+        <p>
+          Lastly to get a cleaner display I used the RichEmbed constructor of Discord.js features.
+
+          <img src="../img/discord_bot_embed.png" />
+
+        </p>
+
+        <p>
+          At the end this was an interesting litle project that teach me how to use async function and develop a node.js app.
         </p>
 
     </div>
