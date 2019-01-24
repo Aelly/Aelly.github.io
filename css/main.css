@@ -108,6 +108,11 @@ textarea {
   text-align: center;
 }
 
+#social_button{
+  border: 1px solid white;
+  padding-bottom: 10px;
+}
+
 #main_box {
   float: left;
 }
@@ -152,7 +157,7 @@ textarea {
 }
 
 body {
-  background-color: rgb(28, 31, 14);
+  background-color: #28343b;
   color: white;
 }
 
@@ -199,6 +204,21 @@ code{
     text-align: center;
     text-decoration: none;
     font-size: 17px;
+}
+
+.link_button {
+  background-color: #313f49;
+  border: 1px solid white;
+  height: 50px;
+  width: 150px;
+}
+
+.link_button:hover{
+  background-color: #48545d;
+}
+
+.href_button{
+  display: inline-block;
 }
 
 /* ==========================================================================
