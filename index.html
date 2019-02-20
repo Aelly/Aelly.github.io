@@ -11,98 +11,118 @@
 </head>
 
 <body>
-	<div id="About_me">
-		<h2>About me</h2>
-		<img src="img/Mashiro_Shiina-redim.jpg" alt="Mashiro" width=308 height=278>
-		<p>
-			French 22 years old man, living near Bordeaux. I am interested in a lot of subject
-			in IT and new technology from video game and software programing to image processing.
-			I'm also a big fan of differents music genre (rock, electro, classical and Jpop),
-			video game and japanese animation. I'm trying to have a basic level in as many
-			fields of IT as possible and i created this website to keep track of my projects
-			and to learn web development.
-		</p>
-		<div id="social_button">
-			<h2>Link</h2>
-			<a class="href_button" href="https://github.com/Aelly" target="_blank"><button type="button" class="link_button"><img src="img/logo_github.png" width="50px"/>GitHub</button></a>
-			<a class="href_button" href="https://www.root-me.org/Razen-253311?inc=score&lang=fr" target="_blank"><button type="button" class="link_button">Root-me</button></a>
-		</div>
+
+	<div class="sidenav">
+		<a href="#">About</a>
+		<a href="#">Project</a>
+		<a href="#">Event</a>
+		<a href="#">Contact me</a>
 	</div>
 
-	<div id="main_box">
-		<h2>Studies</h2>
-		<p>
-			On going: master's degree <b>"Image and sounds"</b> at the University of Bordeaux
-		</p>
-		<p>
-			Completed:
+	<div class="main">
+		<div class="flex_container">
+			<div id="About_me" class="flex_child" style="order: 1">
+				<h2>About me</h2>
+				<div id="About_me_image">
+					<img src="img/Mashiro_Shiina-redim.jpg" alt="Mashiro" width=250 height=225>
+				</div>
+				<div id="About_me_text">
+					<p>
+						French 22 years old man, living near Bordeaux. I am interested in a lot of subject
+						in IT and new technology. Big fan of various music genre, video game and japanese
+						animation. I like to learn about diverse programming subject.
+					</p>
+				</div>
+			</div>
+
+			<div id="studies" class="flex_child" style="order: 2">
+				<h2>Studies</h2>
+				<p>
+					On going: master's degree <b>"Image and sounds"</b> at the University of Bordeaux
+				</p>
+				<p>
+					Completed:
+					<ul>
+
+						<li> Bachelor's degree in IT </li>
+						<li> High school diploma in sciences with IT speciality </li>
+
+					</ul>
+				</p>
+			</div>
+		</div>
+
+
+		<div id="social_button">
+			<h2>Link</h2>
+			<a class="href_button" href="https://github.com/Aelly" target="_blank"><button type="button" class="link_button"><img src="img/logo_github.png" width="50px" />GitHub</button></a>
+			<a class="href_button" href="https://www.root-me.org/Razen-253311?inc=score&lang=fr" target="_blank"><button type="button" class="link_button">Root-me</button></a>
+		</div>
+
+
+
+		<div id="main_box">
+
+			<hr>
+
+			<h2>Project</h2>
+
+			<h3>On going</h3>
 			<ul>
-
-				<li> Bachelor's degree in IT </li>
-				<li> High school diploma in sciences with IT speciality </li>
-
+				<li> This website (⁎˃ᆺ˂) </li>
+				<li> Version 2 of the hand gesture program</li>
 			</ul>
-		</p>
 
-		<hr>
+			<h3>Planned</h3>
 
-		<h2>Project</h2>
+			<ul>
+				<li>A first project of robotic</li>
+				<li>Using a <b>raspberry</b> to create a desk display with calendar, reminder other information</li>
+				<li>Image processing: style transfer</li>
+				<li>Augmented reality without marker (Vuforia?)</li>
+				<li> Version 2 of the hand gesture program</li>
+			</ul>
 
-		<h3>On going</h3>
-		<ul>
-			<li> This website (⁎˃ᆺ˂) </li>
-			<li> Version 2 of the hand gesture program</li>
-		</ul>
+			<h3>Completed</h3>
 
-		<h3>Planned</h3>
+			<h4>Web</h4>
 
-		<ul>
-			<li>A first project of robotic</li>
-			<li>Using a <b>raspberry</b> to create a desk display with calendar, reminder other information</li>
-			<li>Image processing: style transfer</li>
-			<li>Augmented reality without marker (Vuforia?)</li>
-			<li> Version 2 of the hand gesture program</li>
-		</ul>
+			<ul>
+				<li>A simple <a href="html/morpion.html">tic-tac-toe</a> and <a href="html/snake.html">snake</a> in javascript
+					to get a first touch with this language</li>
+				<li> <a href="https://aelyperso.000webhostapp.com/BonZami/index.php" target="_blank">Account website</a> to balance the
+					expenses when you're doing shoping or when you go on holiday with your friends.</li>
+				<li>A small project using <a href="html/wiki-api.html">wikipedia api</a> that helped me learn the basic of jquery, ajax and how to use API</li>
+			</ul>
 
-		<h3>Completed</h3>
+			<h4>Image processing</h4>
+			<ul>
+				<li><a href="html/handGesture.html">Hand gesture recognition program</a></li>
+			</ul>
 
-		<h4>Web</h4>
+			<h4>Augmented/Virtual reality</h4>
 
-		<ul>
-			<li>A simple <a href="html/morpion.html">tic-tac-toe</a> and <a href="html/snake.html">snake</a> in javascript
-				to get a first touch with this language</li>
-			<li> <a href="https://aelyperso.000webhostapp.com/BonZami/index.php" target="_blank">Account website</a> to balance the
-				expenses when you're doing shoping or when you go on holiday with your friends.</li>
-			<li>A small project using <a href="html/wiki-api.html">wikipedia api</a> that helped me learn the basic of jquery, ajax and how to use API</li>
-		</ul>
+			<ul>
+				<li>Simple <a href="html/aruco.html">application</a> in augmented reality using <b>ArUco</b> and <b>Unity</b></li>
+				<li>School project to add augmented reality features in the scratch programing language. <a href="https://github.com/Aelly/ArUco-Markers-Scratch-Extension">Git</a></li>
+			</ul>
 
-		<h4>Image processing</h4>
-		<ul>
-			<li><a href="html/handGesture.html">Hand gesture recognition program</a></li>
-		</ul>
+			<h4>Other</h4>
 
-		<h4>Augmented/Virtual reality</h4>
-
-		<ul>
-			<li>Simple <a href="html/aruco.html">application</a> in augmented reality using <b>ArUco</b> and <b>Unity</b></li>
-			<li>School project to add augmented reality features in the scratch programing language. <a href="https://github.com/Aelly/ArUco-Markers-Scratch-Extension">Git</a></li>
-		</ul>
-
-		<h4>Other</h4>
-
-		<ul>
-			<li>A <a href="html/discordbot.html">discord bot</a> that display an event from a web calender</li>
-		</ul>
+			<ul>
+				<li>A <a href="html/discordbot.html">discord bot</a> that display an event from a web calender</li>
+			</ul>
 
 
-		<hr>
+			<hr>
 
-		<h2>Event</h2>
-		<ul>
-			<li> Nuit de l'info Bordeaux 2018</li>
-			<li> Nuit de l'info Bordeaux 2017</li>
-			<li> Nuit de l'info Bordeaux 2016</li>
-		</ul>
+			<h2>Event</h2>
+			<ul>
+				<li> Nuit de l'info Bordeaux 2018</li>
+				<li> Nuit de l'info Bordeaux 2017</li>
+				<li> Nuit de l'info Bordeaux 2016</li>
+			</ul>
+		</div>
 	</div>
 </body>
 
